@@ -23,14 +23,9 @@
         border: 1px solid lightgray;
         transition: all 0.3s linear;
     }
-    .card:hover {
+    .card:hover,
+    .card:active {
         background: rgb(238, 237, 237);
-    }
-    @media (hover: hover) and (pointer: fine) {
-        .card:hover {
-            background: yellow;
-            background: rgb(238, 237, 237);
-        }
     }
     .card:before,
     .card:after {
@@ -45,15 +40,15 @@
         transition: 0.5s;
         z-index: -1;
     }
-    @media (hover: hover) and (pointer: fine) {
-        .card:hover:before {
-            transform: rotate(20deg);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-        }
-        .card:hover:after {
-            transform: rotate(10deg);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-        }
+    .card:hover:before,
+    .card:active:before {
+        transform: rotate(20deg);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card:hover:after,
+    .card:active:after {
+        transform: rotate(10deg);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     }
     .imgbox {
         position: absolute;
