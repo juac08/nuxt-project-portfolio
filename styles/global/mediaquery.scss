@@ -34,19 +34,3 @@
         gap: 2rem;
     }
 }
-
-@media screen and (max-width: 650px) {
-    .icon {
-        display: none;
-    }
-    .nav {
-        justify-content: center;
-        padding-right: 0;
-        &-logo {
-            display: none;
-        }
-        &-links {
-            justify-content: space-between;
-        }
-    }
-}
