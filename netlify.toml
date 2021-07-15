@@ -1,8 +1,4 @@
-[build]
-  command = "yarn run build"
-  publish="dist"
-  base = "Portfolio"
-  # The base directory should be the path to the nested Vue project
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
