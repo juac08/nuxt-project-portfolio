@@ -24,6 +24,7 @@
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtclub/feathericons": "^1.0.0",
+    "@nuxtjs/pwa": "^3.3.5",
     "fibers": "^5.0.0",
     "sass": "^1.35.1",
     "sass-loader": "10"
