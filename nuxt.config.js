@@ -41,6 +41,7 @@ export default {
       }
     ]
   },
+
   styleResources: {
     scss: ["~/styles/global/base.scss", "~/styles/animations/index.scss"]
   },
@@ -51,7 +52,7 @@ export default {
 
   components: true,
 
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/pwa"],
 
   modules: [
     "@nuxtjs/axios",
