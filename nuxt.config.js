@@ -13,8 +13,31 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon/favicon-16x16.png",
+        sizes: "16x16"
+      },
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon/favicon-32x32.png",
+        sizes: "32x32"
+      },
+      {
+        rel: "apple-touch-icon",
+        type: "image/x-icon",
+        href: "/favicon/apple-touch-icon.png",
+        sizes: "57x57"
+      },
+
+      {
         rel: "stylesheet",
         href: "https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+      },
+      {
+        rel: "manifest",
+        href: "/favicon/manifest.json"
       }
     ]
   },
