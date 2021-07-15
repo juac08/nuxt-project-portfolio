@@ -1,0 +1,52 @@
+<template>
+  <div class="container">
+    <el-carousel :interval="4000" type="card" height="300px">
+      <el-carousel-item v-for="item in DataLatest" :key="item.id">
+        <nuxt-link :to="`/projects/${item.id}`">
+          <el-tooltip
+            class="item"
+            effect="dark"
+            content="Click for Details"
+            placement="top-start"
+          >
+            <div class="card">
+              <div class="imgbox">
+                <img :src="item.img" />
+              </div>
+              <div class="content">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+            </div>
+          </el-tooltip>
+        </nuxt-link>
+      </el-carousel-item>
+    </el-carousel>
+  </div>
+</template>
+
+<script lang="ts">
+import { Vue, Component } from "vue-property-decorator";
+import { DataLatest } from "~/data/LatestData";
+import { latestProjectData } from "~/types/data.types";
+
+@Component
+export default class index extends Vue {
+  /* Props */
+  /* State */
+  /* Data */
+  DataLatest: latestProjectData[] = DataLatest;
+  /* Hooks */
+  /* Methods */
+  /* Computed */
+  /* Watchers */
+}
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
