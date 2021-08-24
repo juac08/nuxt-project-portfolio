@@ -3,9 +3,6 @@
     <section class="section-center">
       <div class="container">
         <div class="header">
-          <!-- <div class="image">
-            <img src="@/static/images/pimage.jpg" alt="" />
-          </div> -->
           <div>
             <h1>I m' Junaid</h1>
             <p>| Frontend Developer |</p>
@@ -109,13 +106,4 @@ p {
   letter-spacing: 0.1em;
   text-align: center;
 }
-/* .image {
-  width: 10rem;
-  height: 10rem;
-  img {
-    object-fit: fill;
-    border-radius: 50%;
-    border-image-width: 1px;
-  }
-} */
 </style>

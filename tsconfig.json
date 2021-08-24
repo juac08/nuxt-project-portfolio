@@ -27,7 +27,8 @@
       "@nuxt/types",
       "@nuxtjs/axios",
       "@types/node",
-      "@nuxtclub/feathericons"
+      "@nuxtclub/feathericons",
+      "@ivanv/vue-collapse-transition"
     ]
   },
   "exclude": [

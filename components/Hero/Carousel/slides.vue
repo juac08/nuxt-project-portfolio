@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <el-carousel :interval="4000" type="card" height="300px">
+  <div class="container block">
+    <el-carousel :interval="3000" type="card" height="300px" arrow="always">
       <el-carousel-item v-for="item in DataLatest" :key="item.id">
         <nuxt-link :to="`/projects/${item.id}`">
           <el-tooltip

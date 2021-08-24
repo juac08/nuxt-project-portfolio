@@ -34,6 +34,12 @@ a {
   overflow: hidden;
   cursor: pointer;
 }
+a:focus {
+  transform: translateY(-2px);
+}
+a:active {
+  transform: translateY(2px);
+}
 
 a:before,
 a:after,

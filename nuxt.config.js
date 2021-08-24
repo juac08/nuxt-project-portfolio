@@ -48,6 +48,10 @@ export default {
   pwa: {
     icon: {
       icon: false
+    },
+    workbox: {
+      autoRegister: true,
+      enabled: true
     }
   },
 

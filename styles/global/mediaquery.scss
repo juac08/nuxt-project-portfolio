@@ -1,36 +1,36 @@
 @media screen and(max-width: 1066px) {
-    .projects {
-        grid-template-columns: 1fr 1fr;
-        place-items: center;
-    }
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
 }
 
 @media screen and(max-width: 811px) {
-    .projects {
-        grid-template-columns: 1fr;
-    }
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 671px) {
-    .el-carousel {
-        width: 500px;
-    }
+  .el-carousel {
+    width: 500px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .el-carousel {
-        width: auto;
-        border: none;
-        padding: 0;
-        margin: 0;
-    }
+  .el-carousel {
+    width: auto;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .container {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-    }
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
 }
