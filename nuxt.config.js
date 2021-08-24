@@ -37,13 +37,13 @@ export default {
 
   components: true,
 
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build","@nuxtjs/pwa"],
 
   modules: [
     "@nuxtjs/axios",
     "@nuxtclub/feathericons",
     "@nuxtjs/style-resources",
-    "@nuxtjs/pwa"
+    
   ],
   pwa: {
     icon: {
