@@ -11,13 +11,6 @@ export default {
       { name: "format-detection", content: "telephone=no" }
     ],
 
-    pwa: {
-      meta: {
-        title: "Portfolio",
-        author: "Junaid"
-      }
-    },
-
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
@@ -46,6 +39,11 @@ export default {
     
   ],
   pwa: {
+    manifest: {
+    name: 'Portfolio',
+    lang: 'en',
+    useWebmanifestExtension: false
+  },
     icon: {
       icon: false
     },
