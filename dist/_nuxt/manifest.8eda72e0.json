@@ -1,7 +1,7 @@
 {
   "name": "Portfolio",
-  "short_name": "porfolio",
-  "description": "## Build Setup",
+  "short_name": "Portfolio",
+  "description": "Portfolio",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.4b95de.png",
@@ -48,6 +48,6 @@
   ],
   "start_url": "/?standalone=true",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#404987",
   "lang": "en"
 }

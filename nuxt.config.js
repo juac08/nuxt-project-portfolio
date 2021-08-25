@@ -40,10 +40,12 @@ export default {
   ],
   pwa: {
     manifest: {
-    name: 'Portfolio',
-    lang: 'en',
-    useWebmanifestExtension: false
-  },
+ name: 'Portfolio',
+ short_name: 'Portfolio',
+ description: 'Portfolio',
+ background_color: '#404987',
+ useWebmanifestExtension: false,
+ },
     icon: {
       icon: false
     },
