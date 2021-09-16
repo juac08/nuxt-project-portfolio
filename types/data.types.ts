@@ -4,7 +4,8 @@ export interface projectData{
     category: string,
     img: string,
     link: string,
-    id:number
+    id: number
+    justAdded?: boolean
 }
 
 export interface latestProjectData{

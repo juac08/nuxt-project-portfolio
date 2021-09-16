@@ -1,14 +1,25 @@
 <template>
   <section class="section-center">
-    <div class="filter-button">
-      <appButton class="btn" @click="filterProject('Vue')">Vue</appButton>|
-      <appButton class="btn" @click="filterProject('React')">React</appButton>|
-      <appButton class="btn" @click="filterProject('Nuxt')">Nuxt</appButton>|
-      <appButton class="btn" @click="filterProject('Mern')">Mern</appButton>|
-      <appButton class="btn" @click="filterProject('HTML')">HTML</appButton>|
-      <appButton class="btn" @click="filterProject('')">All</appButton>
+    <div class="select">
+      <el-select
+        v-model="value"
+        @change="filterProject"
+        :placeholder="placeholder"
+        @focus="isFocusing = true"
+        @blur="isFocusing = false"
+        size="large"
+        filterable
+      >
+        <el-option
+          v-for="option in options"
+          :key="option"
+          :label="option"
+          :value="option"
+        >
+        </el-option>
+      </el-select>
     </div>
-    <transition name="fade" appear>
+    <transition name="slide-vertical" appear>
       <div class="projects">
         <SingleProject
           v-for="project in current"
@@ -30,8 +41,8 @@ import appButton from "~/UI/appButton.vue";
 @Component({
   components: {
     SingleProject,
-    appButton,
-  },
+    appButton
+  }
 })
 export default class index extends Vue {
   /* Props */
@@ -39,36 +50,53 @@ export default class index extends Vue {
   /* Data */
   projects: projectData[] = projects;
   current: projectData[] = projects;
+  options = ["React", "Vue", "Nuxt", "Mern", "All"];
+  value = "";
+  isFocusing = false;
   /* Hooks */
   /* Methods */
   filterProject(value: string) {
-    this.current = this.projects.filter((p) => {
-      return p.description.match(value || "");
+    this.current = this.projects.filter(p => {
+      if (value === "All") {
+        return this.projects;
+      }
+      return p.description.match(value);
     });
   }
   /* Computed */
+  get placeholder(): string {
+    return this.isFocusing ? "Search category" : "Choose category";
+  }
   /* Watchers */
 }
 </script>
 
-<style scoped>
-.filter-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-  gap: 4rem;
-  border-bottom: 1px solid lightgray;
-  max-width: 100%;
-}
-.btn {
-  padding: 5px 5px;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-@media screen and (max-width: 850px) {
-  .filter-button{
-    flex-direction: column;
+<style lang="scss">
+.select {
+  padding: 20px;
+  text-align: center;
+  .el-select .el-input {
+    input {
+      background: rgb(236, 245, 255);
+      border: 1px solid rgb(130, 187, 253);
+      padding: 20px;
+    }
+    input:hover {
+      background: rgb(92, 171, 255);
+    }
+
+    .is-focus {
+      outline: none;
+    }
+
+    input::placeholder {
+      color: rgb(92, 171, 255);
+      font-weight: 500;
+      text-align: center;
+    }
+    input:hover::placeholder {
+      color: white;
+    }
   }
 }
 </style>

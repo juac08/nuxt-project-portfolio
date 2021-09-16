@@ -41,12 +41,12 @@ export default class icons extends Vue {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  text-align: center;
-  line-height: 65px;
-  vertical-align: middle;
   border: 4px solid rgb(1, 15, 86);
   /* box-shadow: $shadow-light; */
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon:hover {
