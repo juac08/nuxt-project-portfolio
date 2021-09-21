@@ -6,11 +6,13 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
+import Project from "~/components/Project/index.vue";
 
 @Component({
   head: {
-    title: "Portfolio | Projects",
+    title: "Portfolio | Projects"
   },
+  components: { Project }
 })
 export default class index extends Vue {
   /* Props */
@@ -23,5 +25,4 @@ export default class index extends Vue {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

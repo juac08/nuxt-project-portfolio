@@ -30,8 +30,8 @@ import Icons from "~/components/Hero/socialIcons/icons.vue";
 @Component({
   components: {
     Carousel,
-    Icons,
-  },
+    Icons
+  }
 })
 export default class index extends Vue {
   /* Props */
@@ -44,7 +44,7 @@ export default class index extends Vue {
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .header {
   gap: 2rem;
   border-bottom: 1px solid rgb(231, 231, 231);
@@ -77,23 +77,22 @@ export default class index extends Vue {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 95vh;
   position: relative;
   background-blend-mode: hard-light;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 0 auto; */
 }
 @media screen and (max-width: 421px) {
   .header {
-    width: fit-content;
+    width: 100%;
     .des {
       width: 200px;
       margin: auto;

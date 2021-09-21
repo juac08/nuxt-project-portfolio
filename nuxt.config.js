@@ -30,30 +30,28 @@ export default {
 
   components: true,
 
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/pwa"],
 
   modules: [
     "@nuxtjs/axios",
     "@nuxtclub/feathericons",
-    "@nuxtjs/style-resources",
-    "@nuxtjs/pwa"
-    
+    "@nuxtjs/style-resources"
   ],
   pwa: {
     manifest: {
- name: 'Portfolio',
- short_name: 'Portfolio',
- description: 'Portfolio',
- background_color: '#404987',
- useWebmanifestExtension: false,
- },
+      name: "Portfolio",
+      short_name: "Portfolio",
+      description: "Portfolio",
+      background_color: "#404987",
+      useWebmanifestExtension: false
+    },
     icon: {
       icon: false
-    },
-    workbox: {
-      autoRegister: true,
-      enabled: true
     }
+    // workbox: {
+    //   autoRegister: true,
+    //   enabled: true
+    // }
   },
 
   axios: {},

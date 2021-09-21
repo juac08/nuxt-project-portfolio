@@ -24,7 +24,9 @@
           >
         </div>
       </div>
-      <Icons />
+      <div class="icon">
+        <Icons />
+      </div>
     </nav>
   </div>
 </template>
@@ -35,8 +37,8 @@ import Icons from "~/components/Hero/socialIcons/icons.vue";
 
 @Component({
   components: {
-    Icons,
-  },
+    Icons
+  }
 })
 export default class index extends Vue {
   /* Props */
@@ -49,4 +51,23 @@ export default class index extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@media screen and (max-width: 650px) {
+  .nav {
+    justify-content: center;
+    padding-right: 0;
+    .icon {
+      display: none;
+    }
+    &-logo {
+      display: none;
+    }
+    &-links {
+      justify-content: space-between;
+    }
+  }
+  .icon {
+    display: none;
+  }
+}
+</style>

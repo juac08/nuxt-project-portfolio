@@ -6,8 +6,9 @@
 </template>
 
 <script>
-export default {};
+import NavBar from "~/components/NavBar/index.vue";
+export default {
+  components: { NavBar }
+};
 </script>
-<style scoped>
-</style>
-
+<style scoped></style>

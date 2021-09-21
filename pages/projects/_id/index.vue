@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <div>
     <div v-for="project in filter" :key="project.id" class="filter">
       <div class="image">
         <a :href="project.link">
@@ -24,7 +24,7 @@
 
       <appButton @click="backToHome" class="btn">Back To Home</appButton>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script lang="ts">
@@ -36,11 +36,11 @@ import appButton from "~/UI/appButton.vue";
 @Component({
   components: {
     SingleProject,
-    appButton,
+    appButton
   },
   head: {
-    title: "Portfolio | Project",
-  },
+    title: "Portfolio | Project"
+  }
 })
 export default class index extends Vue {
   /* Props */
@@ -55,7 +55,7 @@ export default class index extends Vue {
 
   /* Computed */
   get filter() {
-    return this.projects.filter((p) => {
+    return this.projects.filter(p => {
       return p.id == parseInt(this.$route.params.id);
     });
   }
@@ -63,5 +63,4 @@ export default class index extends Vue {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
