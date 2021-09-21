@@ -19,13 +19,13 @@
         </el-option>
       </el-select>
     </div>
-    <div class="projects">
+    <transition-group name="slide-vertical" class="projects">
       <SingleProject
         v-for="project in current"
         :key="project.id"
         :project="project"
       />
-    </div>
+    </transition-group>
   </section>
 </template>
 
