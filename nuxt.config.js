@@ -12,7 +12,7 @@ export default {
       { hid: "description", name: "description", content: "" },
       {
         name: "msapplication-TileColor",
-        content: "#404987"
+        content: "#100470"
       },
       {
         name: "msapplication-TileImage",
@@ -20,7 +20,7 @@ export default {
       },
       {
         name: "theme-color",
-        content: "#404987"
+        content: "#100470"
       }
     ],
 

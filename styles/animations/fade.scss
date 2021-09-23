@@ -1,8 +1,17 @@
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+    transition: all 1s linear;
 }
+
 .fade-enter,
 .fade-leave-to {
-  opacity: 0;
+    opacity: 0;
+}
+
+.fade-move {
+    transition: all 1s linear;
+}
+
+.fade-leave-active {
+    position: absolute;
 }
