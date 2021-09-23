@@ -1,6 +1,6 @@
 .fade-enter-active,
 .fade-leave-active {
-    transition: all 1s linear;
+    transition: all 0.3s linear;
 }
 
 .fade-enter,
@@ -9,7 +9,7 @@
 }
 
 .fade-move {
-    transition: all 1s linear;
+    transition: all 0.3s linear;
 }
 
 .fade-leave-active {
