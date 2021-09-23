@@ -19,7 +19,7 @@
         </el-option>
       </el-select>
     </div>
-    <transition-group name="slide-vertical" class="projects">
+    <transition-group name="fade" class="projects">
       <SingleProject
         v-for="project in current"
         :key="project.id"
