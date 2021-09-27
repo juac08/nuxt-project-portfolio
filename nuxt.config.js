@@ -6,7 +6,11 @@ export default {
     },
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "viewport",
+        content:
+          "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+      },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
       { hid: "description", name: "description", content: "" },
@@ -210,10 +214,10 @@ export default {
   pwa: {
     meta: [
       {
-        title: 'Portfolio',
-        author: 'Junaid Ahmad',
+        title: "Portfolio",
+        author: "Junaid Ahmad"
       },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: "apple-mobile-web-app-capable", content: "yes" }
     ],
     manifest: {
       name: "Portfolio",
