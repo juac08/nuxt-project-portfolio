@@ -212,13 +212,11 @@ export default {
     "@nuxtjs/style-resources"
   ],
   pwa: {
-    meta: [
-      {
-        title: "Portfolio",
-        author: "Junaid Ahmad"
-      },
-      { name: "apple-mobile-web-app-capable", content: "yes" }
-    ],
+    meta: {
+      title: "Portfolio",
+      author: "Junaid Ahmad"
+    },
+
     manifest: {
       name: "Portfolio",
       short_name: "Portfolio",

@@ -49,6 +49,9 @@ export default class index extends Vue {
   gap: 2rem;
   border-bottom: 1px solid rgb(231, 231, 231);
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   h1,
   p {
     color: rgb(219, 228, 254);
@@ -92,9 +95,6 @@ export default class index extends Vue {
 }
 @media screen and (max-width: 421px) {
   .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     .des {
       width: 200px;

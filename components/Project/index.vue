@@ -72,7 +72,12 @@ export default class index extends Vue {
 <style lang="scss">
 .select {
   padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .el-select {
+    min-width: 340px;
+  }
   .el-select .el-input {
     input {
       background: rgb(236, 245, 255);
