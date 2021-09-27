@@ -10,6 +10,7 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
       { hid: "description", name: "description", content: "" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
       {
         name: "msapplication-TileColor",
         content: "#100470"
