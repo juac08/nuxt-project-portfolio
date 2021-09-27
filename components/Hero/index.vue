@@ -92,6 +92,9 @@ export default class index extends Vue {
 }
 @media screen and (max-width: 421px) {
   .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     .des {
       width: 200px;
