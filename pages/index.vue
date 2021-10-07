@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container-2">
     <Hero />
   </section>
 </template>
@@ -10,11 +10,11 @@ import Hero from "~/components/Hero/index.vue";
 
 @Component({
   head: {
-    title: "Portfolio | Home",
+    title: "Portfolio | Home"
   },
   components: {
-    Hero,
-  },
+    Hero
+  }
 })
 export default class index extends Vue {
   /* Props */
@@ -27,5 +27,4 @@ export default class index extends Vue {
 }
 </script>
 
-<style  scoped>
-</style>
+<style scoped></style>

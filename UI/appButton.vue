@@ -97,7 +97,7 @@ a:hover span:after {
   right: 25%;
 }
 
-a:hover {
+span:hover {
   color: white;
 }
 </style>

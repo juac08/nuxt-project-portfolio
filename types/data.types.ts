@@ -17,3 +17,22 @@ export interface latestProjectData{
     id:number
 }
 
+export interface AboutTimeline{
+    
+        month: number | string,
+        year: number,
+        title: string,
+        description:string
+}
+
+
+export interface IntegrationTimeLine {   
+    title: string,
+    description:string,
+    integrations: 
+        {
+            title: string,
+            image: string,
+            description: string
+        }[]       
+}

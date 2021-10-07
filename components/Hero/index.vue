@@ -1,8 +1,8 @@
 <template>
   <div class="container-1">
     <section class="section-center">
-      <div class="container">
-        <div class="header">
+      <div class="container-2">
+        <div class="header-1">
           <div>
             <h1>I m' Junaid</h1>
             <p>| Frontend Developer |</p>
@@ -45,7 +45,7 @@ export default class index extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.header {
+.header-1 {
   gap: 2rem;
   border-bottom: 1px solid rgb(231, 231, 231);
   padding: 5px;
@@ -54,7 +54,7 @@ export default class index extends Vue {
   align-items: center;
   h1,
   p {
-    color: rgb(219, 228, 254);
+    color: rgb(255, 255, 255);
     letter-spacing: 0.1em;
     text-align: center;
   }
@@ -67,7 +67,7 @@ export default class index extends Vue {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 2px;
   }
 }
 .container-1 {
@@ -87,7 +87,7 @@ export default class index extends Vue {
   align-items: center;
   min-height: 100vh;
 }
-.container {
+.container-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;

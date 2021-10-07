@@ -86,4 +86,5 @@ export const DataLatest : latestProjectData[]= [
     read: "20 min",
     id:10
   },
+  
 ];

@@ -7,8 +7,14 @@
       <div class="nav-links">
         <div class="nav-link">
           <nuxt-link to="/">
-            <div v-html="$feathericons['home'].toSvg()"></div>
+            <div v-html="$feathericons['home'].toSvg()" class="icon"></div>
             Home</nuxt-link
+          >
+        </div>
+        <div class="nav-link">
+          <nuxt-link to="/about">
+            <div v-html="$feathericons['users'].toSvg()"></div>
+            About</nuxt-link
           >
         </div>
         <div class="nav-link">
