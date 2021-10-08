@@ -1,22 +1,26 @@
 <template>
-  <div class="container-1">
+  <div class="bg">
     <section class="section-center">
-      <div class="container-2">
-        <div class="header-1">
-          <div>
-            <h1>I m' Junaid</h1>
-            <p>| Frontend Developer |</p>
-            <p class="des">
-              My aim is to help people and provide memorable experiences. I
-              enjoy researching, ideating, collabration and deliver unique
-              design.
-            </p>
-            <div class="icon">
-              <Icons />
+      <div class="container-1">
+        <div class="container-2">
+          <div class="header-1">
+            <div>
+              <h1>I m' Junaid</h1>
+              <p>| Frontend Developer |</p>
+              <p class="des">
+                My aim is to help people and provide memorable experiences. I
+                enjoy researching, ideating, collabration and deliver unique
+                design.
+              </p>
+              <div class="icon">
+                <Icons />
+              </div>
             </div>
           </div>
+          <div style="margin-top:20px">
+            <Carousel></Carousel>
+          </div>
         </div>
-        <Carousel></Carousel>
       </div>
     </section>
   </div>
@@ -45,9 +49,19 @@ export default class index extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.bg {
+  background-image: linear-gradient(
+      45deg,
+      rgba(53, 4, 4, 0.8),
+      rgb(13, 13, 243, 0.8)
+    ),
+    url("./static/images/bc.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .header-1 {
   gap: 2rem;
-  border-bottom: 1px solid rgb(231, 231, 231);
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -71,7 +85,7 @@ export default class index extends Vue {
   }
 }
 .container-1 {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       45deg,
       rgba(53, 4, 4, 0.8),
       rgb(13, 13, 243, 0.8)
@@ -79,13 +93,13 @@ export default class index extends Vue {
     url("./static/images/bc.JPG");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
   position: relative;
   background-blend-mode: hard-light;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 .container-2 {
   display: flex;

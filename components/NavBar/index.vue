@@ -1,38 +1,40 @@
 <template>
   <div>
     <nav class="nav">
-      <div class="nav-logo">
-        <img src="@/static/images/new_logo.png" alt="" />
+      <div class="section-center">
+        <div class="nav-logo">
+          <img src="@/static/images/new_logo.png" alt="" />
+        </div>
+        <div class="nav-links">
+          <div class="nav-link">
+            <nuxt-link to="/">
+              <div v-html="$feathericons['home'].toSvg()" class="icon"></div>
+              Home</nuxt-link
+            >
+          </div>
+          <div class="nav-link">
+            <nuxt-link to="/about">
+              <div v-html="$feathericons['users'].toSvg()" class="icon"></div>
+              About</nuxt-link
+            >
+          </div>
+          <div class="nav-link">
+            <nuxt-link to="/projects">
+              <div v-html="$feathericons['command'].toSvg()" class="icon"></div>
+              Projects</nuxt-link
+            >
+          </div>
+          <div class="nav-link">
+            <nuxt-link to="/contact">
+              <div v-html="$feathericons['at-sign'].toSvg()" class="icon"></div>
+              Contact</nuxt-link
+            >
+          </div>
+        </div>
       </div>
-      <div class="nav-links">
-        <div class="nav-link">
-          <nuxt-link to="/">
-            <div v-html="$feathericons['home'].toSvg()" class="icon"></div>
-            Home</nuxt-link
-          >
-        </div>
-        <div class="nav-link">
-          <nuxt-link to="/about">
-            <div v-html="$feathericons['users'].toSvg()"></div>
-            About</nuxt-link
-          >
-        </div>
-        <div class="nav-link">
-          <nuxt-link to="/projects">
-            <div v-html="$feathericons['command'].toSvg()"></div>
-            Projects</nuxt-link
-          >
-        </div>
-        <div class="nav-link">
-          <nuxt-link to="/contact">
-            <div v-html="$feathericons['at-sign'].toSvg()"></div>
-            Contact</nuxt-link
-          >
-        </div>
-      </div>
-      <div class="icon">
+      <!-- <div class="icon">
         <Icons />
-      </div>
+      </div> -->
     </nav>
   </div>
 </template>
@@ -62,6 +64,9 @@ export default class index extends Vue {
   .nav {
     justify-content: center;
     padding-right: 0;
+    .section-center {
+      justify-content: space-around;
+    }
     .icon {
       display: none;
     }

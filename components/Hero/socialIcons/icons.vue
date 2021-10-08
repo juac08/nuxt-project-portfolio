@@ -2,13 +2,22 @@
   <div>
     <div class="icons">
       <a href="https://www.facebook.com/junaid4u.ahmad">
-        <div v-html="$feathericons['facebook'].toSvg()" class="icon"></div>
+        <img src="social-icons/Facebook.png" alt="" class="icon" />
       </a>
       <a href="https://www.linkedin.com/in/juac08">
-        <div v-html="$feathericons['linkedin'].toSvg()" class="icon"></div>
+        <img src="social-icons/Instagram.png" alt="" class="icon" />
+      </a>
+      <a href="https://www.linkedin.com/in/juac08">
+        <img src="social-icons/LinkedIn.png" alt="" class="icon" />
+      </a>
+      <a href="https://www.linkedin.com/in/juac08">
+        <img src="social-icons/Whatsapp.png" alt="" class="icon" />
       </a>
       <a href="https://github.com/juac08">
-        <div v-html="$feathericons['github'].toSvg()" class="icon"></div>
+        <div v-html="$feathericons['github'].toSvg()" class="icon git"></div>
+      </a>
+      <a href="https://www.linkedin.com/in/juac08">
+        <img src="social-icons/Skype.png" alt="" class="icon" />
       </a>
     </div>
   </div>
@@ -32,26 +41,31 @@ export default class icons extends Vue {
 <style scoped>
 .icons {
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   transition: all 0.3s;
+}
+img {
+  width: 50px;
+  height: 50px;
 }
 .icon {
   color: rgb(255, 255, 255);
-  background: rgb(39, 32, 139);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 4px solid rgb(1, 15, 86);
-  /* box-shadow: $shadow-light; */
+  border-radius: 20%;
   transition: all 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.git {
+  width: 40px;
+  height: 40px;
+  background: #217ec6;
+  font-weight: 800;
+}
 
 .icon:hover {
   transform: scale(1.05);
-  background: blue;
-  /* box-shadow: $shadow-dark; */
 }
 </style>

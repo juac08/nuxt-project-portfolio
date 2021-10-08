@@ -1,25 +1,27 @@
 <template>
-  <div class="container">
-    <div class="main-timeline">
-      <div class="timeline" v-for="(t, index) in AboutData" :key="index">
-        <div class="icon"></div>
-        <div class="date-content">
-          <div class="date-outer">
-            <span class="date">
-              <span class="month" v-if="t.month">{{ t.month }} Years</span>
-              <span class="year" v-if="t.year">{{ t.year }}</span>
-            </span>
+  <section class="section-center">
+    <div class="container">
+      <div class="main-timeline">
+        <div class="timeline" v-for="(t, index) in AboutData" :key="index">
+          <div class="icon"></div>
+          <div class="date-content">
+            <div class="date-outer">
+              <span class="date">
+                <span class="month" v-if="t.month">{{ t.month }} Years</span>
+                <span class="year" v-if="t.year">{{ t.year }}</span>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="timeline-content">
-          <h5 class="title">{{ t.title }}</h5>
-          <p class="description">
-            {{ t.description }}
-          </p>
+          <div class="timeline-content">
+            <h5 class="title">{{ t.title }}</h5>
+            <p class="description">
+              {{ t.description }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

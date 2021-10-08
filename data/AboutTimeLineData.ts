@@ -43,36 +43,7 @@ export const AboutData : AboutTimeline[] = [
         title: 'Best OKR ',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie'
     },
-    {
-        month: 20,
-        year: 2020,
-        title: 'Best OKR ',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie'
-    },
-    {
-        month: 20,
-        year: 2020,
-        title: 'Best OKR ',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie'
-    },
-    {
-        month: 20,
-        year: 2020,
-        title: 'Best OKR ',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie'
-    },
-    {
-        month: 20,
-        year: 2020,
-        title: 'Best OKR ',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie'
-    },
-    {
-        month: 20,
-        year: 2020,
-        title: 'Best OKR ',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie'
-    },
+    
 
     
 ]
