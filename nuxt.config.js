@@ -225,7 +225,8 @@ export default {
   modules: [
     "@nuxtjs/axios",
     "@nuxtclub/feathericons",
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
+    "@nuxtjs/bootstrap-vue"
   ],
   pwa: {
     meta: {

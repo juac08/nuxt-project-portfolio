@@ -2,22 +2,19 @@
   <div>
     <div class="icons">
       <a href="https://www.facebook.com/junaid4u.ahmad">
-        <img src="social-icons/Facebook.png" alt="" class="icon" />
+        <img src="social-icons/facebook.svg" alt="" class="icon" />
       </a>
       <a href="https://www.linkedin.com/in/juac08">
-        <img src="social-icons/Instagram.png" alt="" class="icon" />
+        <img src="social-icons/instagram.svg" alt="" class="icon" />
       </a>
       <a href="https://www.linkedin.com/in/juac08">
-        <img src="social-icons/LinkedIn.png" alt="" class="icon" />
-      </a>
-      <a href="https://www.linkedin.com/in/juac08">
-        <img src="social-icons/Whatsapp.png" alt="" class="icon" />
+        <img src="social-icons/linkedIn.svg" alt="" class="icon" />
       </a>
       <a href="https://github.com/juac08">
-        <div v-html="$feathericons['github'].toSvg()" class="icon git"></div>
+        <img src="social-icons/github.svg" alt="" class="icon" />
       </a>
       <a href="https://www.linkedin.com/in/juac08">
-        <img src="social-icons/Skype.png" alt="" class="icon" />
+        <img src="social-icons/whatsapp.svg" alt="" class="icon" />
       </a>
     </div>
   </div>

@@ -1,5 +1,23 @@
 <template>
   <div class="container block">
+    <!-- <b-carousel
+      v-model="slide"
+      id="slide"
+      :interval="4000"
+      controls
+      indicators
+      style="text-shadow: 1px 1px 2px #333;"
+    >
+      <b-carousel-slide
+        v-for="item in DataLatest"
+        :key="item.id"
+        :caption="item.name"
+        :text="item.description"
+        :img-src="item.img"
+      >
+      </b-carousel-slide>
+    </b-carousel> -->
+
     <el-carousel :interval="3000" type="card" height="300px" arrow="always">
       <el-carousel-item v-for="item in DataLatest" :key="item.id">
         <nuxt-link :to="`/projects/${item.id}`">
@@ -36,6 +54,7 @@ export default class index extends Vue {
   /* State */
   /* Data */
   DataLatest: latestProjectData[] = DataLatest;
+  slide = 0;
   /* Hooks */
   /* Methods */
   /* Computed */
@@ -43,10 +62,66 @@ export default class index extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+/* #slide {
+  width: calc(100% + 30px);
+  margin-top: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  max-height: 400px;
+  overflow: hidden;
+}
+.carousel-inner {
+  height: 400px;
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+
+  .carousel-item {
+    height: 400px;
+    overflow: hidden;
+
+    .img-fluid {
+      position: absolute;
+      min-width: 1920px;
+    }
+
+    @media screen and (max-width: 1920px) {
+      .img-fluid {
+        left: 50%;
+        margin-left: -960px;
+      }
+    }
+
+    .carousel-caption {
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+
+      * {
+        position: relative;
+        z-index: 10;
+      }
+
+      .slide-shade {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+      }
+    }
+  }
+} */
 </style>

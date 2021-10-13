@@ -59,6 +59,7 @@ export default class index extends Vue {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-blend-mode: hard-light;
 }
 .header-1 {
   gap: 2rem;
@@ -95,7 +96,6 @@ export default class index extends Vue {
   background-position: center;
   background-size: cover; */
   position: relative;
-  background-blend-mode: hard-light;
   display: flex;
   justify-content: center;
   align-items: center;
