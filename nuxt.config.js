@@ -294,6 +294,8 @@ export default {
   generate: {
     fallback: true
   },
+  target: "static",
+  ssr: false,
   transition: {
     name: "fade",
     mode: "out-in"
