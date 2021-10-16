@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 export default {
   head: {
     title: "Porfolio",
@@ -226,8 +228,35 @@ export default {
     "@nuxtjs/axios",
     "@nuxtclub/feathericons",
     "@nuxtjs/style-resources",
-    "@nuxtjs/bootstrap-vue"
+    "@nuxtjs/bootstrap-vue",
+    "@nuxtjs/firebase"
   ],
+
+  firebase: {
+    config: {
+      apiKey: "AIzaSyDigVamFN3f0QTMBsxZcgtcZ_AYk2OvKVU",
+      authDomain: "futureworks-testing.firebaseapp.com",
+      projectId: "futureworks-testing",
+      storageBucket: "futureworks-testing.appspot.com",
+      messagingSenderId: "1016994484935",
+      appId: "1:1016994484935:web:930f54f968da076cb7e4e2"
+    },
+    services: {
+      messaging: {
+        createServiceWorker: false,
+        actions: [
+          {
+            action: "randomName",
+            url: "randomUrl"
+          }
+        ],
+        fcmPublicVapidKey:
+          "BLtWdnruN9z3RozNVb8MuPiOdpV9bAA4BuuwperrEyDN73kOhVaSWZd0HKD7om2DOnEPmTtFmlnwtYmxZ7M87tQ",
+        inject: fs.readFileSync("./serviceWorker.js")
+      }
+    }
+  },
+
   pwa: {
     meta: {
       title: "Portfolio",
@@ -265,7 +294,6 @@ export default {
   generate: {
     fallback: true
   },
-  ssr: false,
   transition: {
     name: "fade",
     mode: "out-in"

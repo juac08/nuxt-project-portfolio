@@ -1,5 +1,6 @@
 <template>
   <section class="section-center">
+    About Page
     <div class="container">
       <div class="main-timeline">
         <div class="timeline" v-for="(t, index) in AboutData" :key="index">

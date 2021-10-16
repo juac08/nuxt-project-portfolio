@@ -28,6 +28,8 @@
       "@nuxtjs/axios",
       "@types/node",
       "@nuxtclub/feathericons",
+      "@nuxtjs/firebase",
+
     ]
   },
   "exclude": [
