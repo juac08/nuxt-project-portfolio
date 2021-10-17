@@ -243,16 +243,10 @@ export default {
     },
     services: {
       messaging: {
-        createServiceWorker: true,
-        actions: [
-          {
-            action: "randomName",
-            url: "randomUrl"
-          }
-        ],
+        createServiceWorker: false,
         fcmPublicVapidKey:
-          "BLtWdnruN9z3RozNVb8MuPiOdpV9bAA4BuuwperrEyDN73kOhVaSWZd0HKD7om2DOnEPmTtFmlnwtYmxZ7M87tQ",
-        inject: fs.readFileSync("./static/firebase-messaging-sw.js")
+          "BLtWdnruN9z3RozNVb8MuPiOdpV9bAA4BuuwperrEyDN73kOhVaSWZd0HKD7om2DOnEPmTtFmlnwtYmxZ7M87tQ"
+        // inject: fs.readFileSync("./static/firebase-messaging-sw.js")
       }
     }
   },
