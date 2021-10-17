@@ -243,7 +243,7 @@ export default {
     },
     services: {
       messaging: {
-        createServiceWorker: false,
+        createServiceWorker: true,
         actions: [
           {
             action: "randomName",
@@ -252,7 +252,7 @@ export default {
         ],
         fcmPublicVapidKey:
           "BLtWdnruN9z3RozNVb8MuPiOdpV9bAA4BuuwperrEyDN73kOhVaSWZd0HKD7om2DOnEPmTtFmlnwtYmxZ7M87tQ",
-        inject: fs.readFileSync("./serviceWorker.js")
+        inject: fs.readFileSync("./static/firebase-messaging-sw.js")
       }
     }
   },
