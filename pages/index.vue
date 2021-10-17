@@ -24,9 +24,9 @@ export default class index extends Vue {
     console.log(currentToken);
     const data = JSON.stringify({
       notification: {
-        title: "firebase",
+        title: "Futureworks",
         body: "Welcome to Futureworks",
-        click_action: "FutureWorks ",
+        click_action: "FutureWorks",
         icon:
           "https://resources-live.sketch.cloud/files/aea485a0-06c5-4fc8-947d-a4efd1b5bcf6.png?Expires=1634680800&Signature=VvPYVA8ToNHDpZEef559MRtFmcagoXdumt5Q5BaL8VJWaFIE11aRQrdslSsX~FsxqjYoR3ou4d1D7TSWj-~hwrvyEVkfe5XLzH3PLRwfiaIFBLny8QzPexdsPZpSqGXb5i9FquKzcygQYSVMbX2uBxBfCD0IoR3o-PLUMwsR92k_&Key-Pair-Id=APKAJOITMW3RWOLNNPYA"
       },
