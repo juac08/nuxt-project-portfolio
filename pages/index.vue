@@ -19,7 +19,7 @@ import axios from "axios";
 export default class index extends Vue {
   /* Props */
   /* State */
-  async mounted() {
+  async created() {
     const currentToken = await this.$fire.messaging.getToken();
     console.log(currentToken);
     const data = JSON.stringify({
