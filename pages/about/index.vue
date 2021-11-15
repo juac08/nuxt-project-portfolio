@@ -1,6 +1,7 @@
 <template>
   <section class="section-center">
-    About Page
+    <AboutHero />
+    <History />
     <div class="container">
       <div class="main-timeline">
         <div class="timeline" v-for="(t, index) in AboutData" :key="index">
@@ -8,19 +9,35 @@
           <div class="date-content">
             <div class="date-outer">
               <span class="date">
-                <span class="month" v-if="t.month">{{ t.month }} Years</span>
-                <span class="year" v-if="t.year">{{ t.year }}</span>
+                <span class="month" v-show="t.month">{{ t.month }} Years</span>
+                <span class="year" v-show="t.year">{{ t.year }}</span>
               </span>
             </div>
           </div>
           <div class="timeline-content">
-            <h5 class="title">{{ t.title }}</h5>
+            <h1
+              class="title"
+              style="border-bottom:2px solid lightgray; display:inline-block"
+            >
+              {{ t.title }}
+            </h1>
             <p class="description">
               {{ t.description }}
             </p>
           </div>
         </div>
       </div>
+    </div>
+    <Team />
+    <WorkDemo />
+    <div>
+      <TimeLine />
+    </div>
+    <div>
+      <Testimonial />
+    </div>
+    <div>
+      <Subscribe />
     </div>
   </section>
 </template>
@@ -29,10 +46,26 @@
 import { Vue, Component } from "vue-property-decorator";
 import { AboutData } from "~/data/AboutTimeLineData";
 import { AboutTimeline } from "~/types/data.types";
+import AboutHero from "~/components/About/aboutHero.vue";
+import History from "~/components/About/history.vue";
+import Team from "~/components/About/team.vue";
+import WorkDemo from "~/components/About/workDemo.vue";
+import TimeLine from "~/components/About/workLine.vue";
+import Subscribe from "~/components/About/subscribe.vue";
+import Testimonial from "~/components/About/components/testimonial.vue";
 
 @Component({
   head: {
     title: "Portfolio | About"
+  },
+  components: {
+    AboutHero,
+    History,
+    Team,
+    WorkDemo,
+    TimeLine,
+    Subscribe,
+    Testimonial
   }
 })
 export default class index extends Vue {
@@ -51,7 +84,12 @@ export default class index extends Vue {
 body {
   background-color: #f7f7f7;
   margin-top: 20px;
+  p {
+    font-size: 14px;
+    color: #373b3f;
+  }
 }
+
 .container {
   margin: 4rem auto;
 }
@@ -62,9 +100,9 @@ body {
 .main-timeline:before {
   content: "";
   display: block;
-  width: 2px;
+  width: 7px;
   height: 100%;
-  background: #060855;
+  background: #404887;
   margin: 0 auto;
   position: absolute;
   top: 0;
@@ -84,9 +122,9 @@ body {
 }
 
 .main-timeline .icon {
-  width: 18px;
-  height: 18px;
-  line-height: 18px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -95,8 +133,8 @@ body {
   right: 0;
 }
 .description {
-  min-width: 200px;
-  text-align: right;
+  min-width: 150px;
+  text-align: center;
 }
 .main-timeline .icon:before,
 .main-timeline .icon:after {
@@ -111,13 +149,12 @@ body {
 }
 
 .main-timeline .icon:before {
-  background: #fff;
-  border: 2px solid rgb(193, 193, 193);
+  background: #404887;
   left: -3px;
 }
 
 .main-timeline .icon:after {
-  border: 2px solid rgb(229, 229, 243);
+  border: 2px solid rgb(172, 122, 7);
   left: 3px;
 }
 
@@ -135,12 +172,15 @@ body {
   margin-top: 22px;
   position: relative;
 }
-
+.timeline-content {
+  max-width: 600px;
+  width: 200px;
+}
 .main-timeline .date-content:before {
   content: "";
-  width: 36.5%;
-  height: 2px;
-  background: #060855;
+  width: 39.5%;
+  height: 7px;
+  background: #404887;
   margin: auto 0;
   position: absolute;
   top: 0;
@@ -178,7 +218,7 @@ body {
 }
 
 .main-timeline .date-outer:after {
-  border: 2px solid #a6a6a8;
+  border: 2px solid #cea800;
   left: 6px;
 }
 
@@ -228,7 +268,11 @@ body {
 
 .main-timeline .description {
   margin-bottom: 0;
-  color: $color-primary;
+  text-align: left;
+  /* color: $color-primary; */
+}
+.timeline:nth-child(2n) .description {
+  text-align: right;
 }
 
 .main-timeline .timeline:nth-child(2n) .date-content {
@@ -244,9 +288,15 @@ body {
   text-align: right;
 }
 
+@media only screen and (max-width: 1200px) {
+  .main-timeline .date-content {
+    margin-top: 32px;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .main-timeline .date-content {
-    margin-top: 28px;
+    margin-top: 32px;
   }
   .main-timeline .date-content:before {
     width: 30.5%;

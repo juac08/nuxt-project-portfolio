@@ -1,4 +1,5 @@
 const fs = require("fs");
+const webpack = require("webpack");
 
 export default {
   head: {
@@ -32,6 +33,14 @@ export default {
 
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      },
+      { rel: "stylesheet", type: "text/css", href: "slick/slick.css" },
+      { rel: "stylesheet", type: "text/css", href: "slick/slick-them.css" },
+
       {
         href:
           "https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css",
@@ -211,6 +220,13 @@ export default {
       }
     ]
   },
+  // script: [
+  //   { type: "text/javascript", src: "slick/slick.min.js" },
+  //   {
+  //     src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+  //     type: "text/javascript"
+  //   }
+  // ],
 
   styleResources: {
     scss: ["~/styles/global/base.scss", "~/styles/animations/index.scss"]
@@ -222,7 +238,7 @@ export default {
 
   components: true,
 
-  buildModules: ["@nuxt/typescript-build", "@nuxtjs/pwa"],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/pwa", "nuxt-purgecss"],
 
   modules: [
     "@nuxtjs/axios",
@@ -231,6 +247,26 @@ export default {
     "@nuxtjs/bootstrap-vue",
     "@nuxtjs/firebase"
   ],
+  build: {
+    /**
+     * add external plugins
+     */
+    vendor: ["jquery"],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery"
+      })
+    ],
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          exclude: /(node_modules)/
+        });
+      }
+    }
+  },
 
   firebase: {
     config: {
@@ -243,10 +279,10 @@ export default {
     },
     services: {
       messaging: {
-        createServiceWorker: false,
+        // createServiceWorker: true,
         fcmPublicVapidKey:
-          "BLtWdnruN9z3RozNVb8MuPiOdpV9bAA4BuuwperrEyDN73kOhVaSWZd0HKD7om2DOnEPmTtFmlnwtYmxZ7M87tQ"
-        // inject: fs.readFileSync("./static/firebase-messaging-sw.js")
+          "BLtWdnruN9z3RozNVb8MuPiOdpV9bAA4BuuwperrEyDN73kOhVaSWZd0HKD7om2DOnEPmTtFmlnwtYmxZ7M87tQ",
+        inject: fs.readFileSync("./static/firebase-messaging-sw.js")
       }
     }
   },

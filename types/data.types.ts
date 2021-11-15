@@ -36,3 +36,23 @@ export interface IntegrationTimeLine {
             description: string
         }[]       
 }
+
+export interface Team{
+    
+    id: number,
+    first_name: string,
+    last_name: string,
+    email: string,
+    avatar: string,
+    position:string
+}
+
+export interface HowWeWorkTimeLine {
+
+    title: string,
+    description: string,
+    icon: string,
+    id:number
+    
+
+}

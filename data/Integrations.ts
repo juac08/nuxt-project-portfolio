@@ -3,7 +3,7 @@ import { IntegrationTimeLine } from '~/types/data.types';
 export const Integrations: IntegrationTimeLine[] = [
 
     {
-        title: 'Communication Integration',
+        title: 'Data Integration',
         description:'Get reminders and update your OKRs and KPIs straight from Slack.',
         integrations: [
             {
@@ -21,6 +21,7 @@ export const Integrations: IntegrationTimeLine[] = [
                 image: 'images/slack-icon.png',
                 description: 'Futureworks integrates with the systems and tools your team uses every day, so that daily work is deeply linked to the company or departmental goals, without heavy migration costs.'
             },   
+            
         ]
     },
      {
@@ -36,7 +37,7 @@ export const Integrations: IntegrationTimeLine[] = [
         ]
     },
       {
-        title: 'Communication Integration',
+        title: 'Authentication Integration',
         description:'Get reminders and update your OKRs and KPIs straight from Slack.',
         integrations: [
             {

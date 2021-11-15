@@ -17,7 +17,7 @@ export default class slide extends Vue {
   /* Data */
 
   isOpen: boolean | null = null;
-   /* Hooks */
+  /* Hooks */
   /* Methods */
   setIsOpen(): boolean {
     return (this.isOpen = !this.isOpen);

@@ -29,7 +29,7 @@
       "@types/node",
       "@nuxtclub/feathericons",
       "@nuxtjs/firebase",
-
+      "@types/jquery"
     ]
   },
   "exclude": [
